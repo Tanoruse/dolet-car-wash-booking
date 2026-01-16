@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Car Wash Booking</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>DOLET CAR WASH</h1>
+      <p class="muted">Choose a service, pick a time, and submit your booking.</p>
+      <a class="link" href="admin.html">Admin</a>
+    </header>
+
+    <section class="card">
+      <h2>Booking Details</h2>
+
+      <form id="bookingForm">
+        <label>
+          Service
+          <select id="service" required></select>
+        </label>
+
+        <div class="grid2">
+          <label>
+            Date
+            <input id="date" type="date" required />
+          </label>
+
+          <label>
+            Time
+            <select id="time" required></select>
+          </label>
+        </div>
+  
+        <div class="grid2">
+          <label>
+            Full name
+            <input id="name" type="text" placeholder="John Doe" required />
+          </label>
+
+          <label>
+            Phone number
+            <input id="phone" type="tel" placeholder="+1 437..." required />
+          </label>
+        </div>
+        
+        <label>
+            Email address
+            <input id="email" type="email" placeholder="name@email.com" required />
+        </label>
+
+        <label>
+          Notes (optional)
+          <textarea id="notes" rows="3" placeholder="Anything we should know?"></textarea>
+        </label>
+
+        <label>
+          Upload photos (optional)
+          <input id="photos" type="file" accept="image/*" multiple />
+        </label>
+
+        <div id="preview" class="preview"></div>
+
+        <button class="btn" type="submit" id="submitBtn">Submit booking</button>
+        <p id="msg" class="msg"></p>
+      </form>
+    </section>
+  </div>
+
+  <!-- ✅ SUCCESS MODAL -->
+  <div id="successModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Booking Received</h2>
+      <p>
+        Your request has been successfully received.<br />
+        We will contact you shortly to confirm.
+      </p>
+      <button id="closeModal" class="btn">OK</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

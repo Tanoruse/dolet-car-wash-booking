@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Car Wash</title>
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Admin Dashboard</h1>
+      <p class="muted">Secure login to manage bookings.</p>
+      <a class="link" href="index.html">Back to booking</a>
+    </header>
+
+    <!-- ================= LOGIN ================= -->
+    <section class="card" id="loginCard">
+      <h2>Admin Login</h2>
+
+      <form id="adminLoginForm">
+        <label>
+          Email
+          <input
+            id="adminEmail"
+            type="email"
+            placeholder="admin@carwash.com"
+            required
+          />
+        </label>
+
+        <label>
+          Password
+          <input
+            id="adminPassword"
+            type="password"
+            placeholder="••••••••"
+            required
+          />
+        </label>
+
+        <button class="btn" type="submit">Login</button>
+
+        <!-- MESSAGE AREA -->
+        <p id="adminMsg" class="msg"></p>
+      </form>
+    </section>
+
+    <!-- ================= DASHBOARD ================= -->
+    <section class="card hidden" id="dashboard">
+      <div class="row">
+        <h2>Bookings</h2>
+        <button id="logoutBtn" class="btn danger" type="button">
+          Logout
+        </button>
+      </div>
+
+      <!-- BOOKINGS LIST -->
+      <div id="bookings" class="list"></div>
+    </section>
+
+  </div>
+
+  <!-- MUST BE MODULE -->
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>
